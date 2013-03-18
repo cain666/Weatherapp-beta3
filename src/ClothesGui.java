@@ -60,88 +60,88 @@ public class ClothesGui extends JFrame {
 		contentPane.add(season);
 		//Setting pictures
 	
-		GetClothes upperbody_ = new GetClothes();
-		upperbody_.setBounds(0, 0, 394, 600);
-		contentPane.add(upperbody_);
+		GetClothes clothes= new GetClothes();
+		clothes.setBounds(0, 0, 394, 600);
+		contentPane.add(clothes);
 		
 	
 		//Set Character:
-		upperbody_.setCharacter("data//character.png");
+		clothes.setCharacter("data//character.png");
 		
 		
 		
 		// Setting weather:
 		if (myWeather.getClouds().contentEquals("Fair")){
-		upperbody_.setWeather("data/weather/Fair.png");
+		clothes.setWeather("data/weather/Fair.png");
 		
 		}	
 		if (myWeather.getClouds().contentEquals("Cloudy")){
-		upperbody_.setWeather("data/weather/Cloudy.png");
+		clothes.setWeather("data/weather/Cloudy.png");
 		}
 		if (myWeather.getClouds().contentEquals("Heavy rain")){
-		upperbody_.setWeather("data/weather/Heavy_rain.png");
+		clothes.setWeather("data/weather/Heavy_rain.png");
 		}
 		if (myWeather.getClouds().contentEquals("Partly cloudy")){
-		upperbody_.setWeather("data/weather/Partly_cloudy.png");
+		clothes.setWeather("data/weather/Partly_cloudy.png");
 		}	
 		if (myWeather.getClouds().contentEquals("Rain showers")){
-		upperbody_.setWeather("data/weather/Rain_showers.png");
+		clothes.setWeather("data/weather/Rain_showers.png");
 		}	
 		if (myWeather.getClouds().contentEquals("Rain")){
-		upperbody_.setWeather("data/weather/Rain.png");
+		clothes.setWeather("data/weather/Rain.png");
 		}	
 		if (myWeather.getClouds().contentEquals("Sleet")){
-		upperbody_.setWeather("data/weather/Sleet.png");
+		clothes.setWeather("data/weather/Sleet.png");
 		}	
 		if (myWeather.getClouds().contentEquals("Snow showers")){
-		upperbody_.setWeather("data/weather/Snow_showers.png");
+		clothes.setWeather("data/weather/Snow_showers.png");
 		}	
 		if (myWeather.getClouds().contentEquals("Snow")){
-		upperbody_.setWeather("data/weather/Snow.png");
+		clothes.setWeather("data/weather/Snow.png");
 		}	
 	
 		//Setting Hills:
 		if (myWeather.getClouds().contentEquals("Rain") || (myWeather.getClouds().contentEquals("Heavy rain") || (myWeather.getClouds().contentEquals("Rain showers") || (myWeather.getClouds().contentEquals("Sleet"))))){
-			upperbody_.setHills("data/hills/rain_hill.png");
+			clothes.setHills("data/hills/rain_hill.png");
 			}	
 		else if (myWeather.getClouds().contentEquals("Snow") || (myWeather.getClouds().contentEquals("Snow showers"))){
-			upperbody_.setHills("data/hills/snow_hill.png");
+			clothes.setHills("data/hills/snow_hill.png");
 			}	
 		else
 		{
-			upperbody_.setHills("data/hills/fair_hill.png");
+			clothes.setHills("data/hills/fair_hill.png");
 		}
 		
 	//Setting Background:
 		if (myWeather.getClouds().contentEquals("Rain") || (myWeather.getClouds().contentEquals("Heavy rain") || (myWeather.getClouds().contentEquals("Rain showers") || (myWeather.getClouds().contentEquals("Sleet"))))){
-			upperbody_.setBackgroundcolor("data/backgroundcolor/Rain_bg.png");
+			clothes.setBackgroundcolor("data/backgroundcolor/Rain_bg.png");
 			}	
 		else if (myWeather.getClouds().contentEquals("Snow") || (myWeather.getClouds().contentEquals("Snow showers"))){
-			upperbody_.setBackgroundcolor("data/backgroundcolor/Snow_bg.png");
+			clothes.setBackgroundcolor("data/backgroundcolor/Snow_bg.png");
 		}
 			else
 			{
-				upperbody_.setBackgroundcolor("data/backgroundcolor/Fair_bg.png");	
+				clothes.setBackgroundcolor("data/backgroundcolor/Fair_bg.png");	
 			}
 		
 		// Setting feet:
 		if (myWeather.getClouds().contentEquals("Fair") && (myWeather.getCelsiusInt()>=15)) 
 		{
-			upperbody_.setFeet("data/feet/Fair_feet.png");
+			clothes.setFeet("data/feet/Fair_feet.png");
 		}
 		if (myWeather.getClouds().contentEquals("Fair") && (myWeather.getCelsiusInt()<=15)) 
 		{
-			upperbody_.setFeet("data/feet/Cloudy_feet.png");
+			clothes.setFeet("data/feet/Cloudy_feet.png");
 		}
 		// Set upperbody
 		
 		if (myWeather.getClouds().contentEquals("Fair") && (myWeather.getCelsiusInt()<=15)) 
 		{
-			upperbody_.setUpperbody("data/upperbody/Cloudy_upperbody.png");
+			clothes.setUpperbody("data/upperbody/Cloudy_upperbody.png");
 		}
 		if (myWeather.getClouds().contentEquals("Snow") || (myWeather.getClouds().contentEquals("Snow showers"))) 
 		{
-			upperbody_.setUpperbody("data/upperbody/Snow_upperbody.png");
+			clothes.setUpperbody("data/upperbody/Snow_upperbody.png");
 		}
 	
 		// set lowerbody
@@ -149,7 +149,7 @@ public class ClothesGui extends JFrame {
 		
 		if (myWeather.getClouds().contentEquals("Fair") || (myWeather.getClouds().contentEquals("Cloudy"))  && (myWeather.getCelsiusInt()<=15))
 		{
-			upperbody_.setLowerbody("data/lowerbody/Cloudy_lowerbody.png");
+			clothes.setLowerbody("data/lowerbody/Cloudy_lowerbody.png");
 		}
 		else if (myWeather.getClouds().contentEquals("Rain") || (myWeather.getClouds().contentEquals("Rain showers")) && (myWeather.getCelsiusInt()<=17))
 				{
